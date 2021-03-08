@@ -27,7 +27,7 @@ dataincome_x_train , dataincome_x_test , dataincome_y_train , dataincome_y_test 
 reg = LinearRegression( n_jobs=4)
 reg.fit(dataincome_x_train , dataincome_y_train)
 dataincome_y_pred = reg.predict(dataincome_x_test)
-mean_squared_error(dataincome_y_test , dataincome_y_pred)
+print(mean_squared_error(dataincome_y_test , dataincome_y_pred))
 
 """**INPPUT1**"""
 
