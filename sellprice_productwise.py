@@ -41,7 +41,7 @@ datapricing_percentage_y_pred = reg1.predict(datapricing_percentage_x_test)
 reg2 = MLPRegressor(hidden_layer_sizes=(550,),solver='lbfgs' , tol=0.01 , activation='logistic' ,max_iter=250 , momentum=.95 )
 reg2.fit(datapricing_x_train , datapricing_y_train)
 datapricing_y_pred = reg2.predict(datapricing_x_test)
-mean_squared_error(datapricing_percentage_y_test , datapricing_percentage_y_pred) , mean_squared_error(datapricing_y_test , datapricing_y_pred)
+print(mean_squared_error(datapricing_percentage_y_test , datapricing_percentage_y_pred) , mean_squared_error(datapricing_y_test , datapricing_y_pred))
 
 """**INFLUENCITY DATA**"""
 
