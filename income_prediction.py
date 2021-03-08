@@ -61,13 +61,3 @@ save_as_csv_of_30days_pd = pd.DataFrame({
 })
 save_as_csv_of_30days_pd.to_csv("30Days Income Prediction.csv")
 
-"""**PLOTING**"""
-
-import matplotlib.pyplot as plt 
-plotdata = pd.read_csv("30Days Income Prediction.csv")
-income_x = plotdata.iloc[: , 1] 
-income_y = plotdata.iloc[: , 2] 
-income_date_x = dataincome[x-1 , 0]
-income_date_y = dataincome[x-1 , 4]
-plt.plot(income_x ,income_y)
-plt.scatter(income_date_x , income_date_y)
