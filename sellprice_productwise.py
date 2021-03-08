@@ -149,35 +149,4 @@ save_as_csv_of_30days_pd = pd.DataFrame({
 })
 save_as_csv_of_30days_pd.to_csv("30Days Data Day Wise each Product.csv")
 
-"""**PLOTING**"""
-
-save_as_csv_of_30days_pd = pd.read_csv("30Days Data Day Wise each Product.csv")
-import matplotlib.pyplot as plt
-plt.plot(save_as_csv_of_30days_pd.iloc[: , 1] , datapricing[ x-46:x , 2],  label=("According to Last 30 days Buying Price" ))
-plt.plot(save_as_csv_of_30days_pd.iloc[: , 1],  save_as_csv_of_30days_pd.iloc[: ,1 ] ,"g", label=("Selling Price"))
-plt.scatter(data.iloc[x-1 , 0] ,prediction_of_price , c="r" )
-plt.xlabel("Day")
-plt.legend(loc='best')
-plt.ylim(0 , 100)
-plt.show()
-
-plt.plot(save_as_csv_of_30days_pd.iloc[: , 1], save_as_csv_of_30days_pd.iloc[: , 3] , label="Percentage of profit")
-plt.scatter(data.iloc[x-1 , 0], prediction_of_price_percent , c="b")
-plt.plot(save_as_csv_of_30days_pd.iloc[: , 1] , save_as_csv_of_30days_pd.iloc[: , 3], label="Influencity of Product")
-plt.scatter(data.iloc[x-1 , 0] , prediction_of_influence , c="y")
-plt.xlabel("Day")
-plt.legend(loc="best")
-plt.show()
-
-plt.scatter(save_as_csv_of_30days_pd.iloc[: , 1] , save_as_csv_of_30days_pd.iloc[: ,4] ,c="g", label="Predicted Investing Point" )
-plt.scatter(data.iloc[x-1 , 0] , Invest_prediction)
-plt.xlabel("Day")
-plt.legend()
-plt.show()
-
-plt.plot(data.iloc[x-31:x , 0] , STOCKS_f30days[: , 1], label="Last 30 days Stocks")
-plt.plot(data.iloc[x-31:x , 0] , STOCKS_f30days[: , 2] , label="Last 30 days Sellig Peices")
-plt.xlabel("Day")
-plt.legend(loc="best")
-plt.show()
 
